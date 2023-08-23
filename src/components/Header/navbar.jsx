@@ -1,6 +1,11 @@
 import {Link} from 'react-router-dom'
 
-export default function Navbar() {
+export default function Navbar({setIsCart, showCart}) {
+
+    const handleOpen = () => {
+        setIsCart(true);
+    }
+
     return(
         <>
         <div className='flex justify-between items-center'>
@@ -14,11 +19,14 @@ export default function Navbar() {
                     <Link to="/shop" className='text-xl '>Shop</Link> 
                     <div className='mt-1 w-0 h-1 bg-white group-hover:w-full transition-all duration-300'></div>
                 </div>
+                
             </div>
 
+            {showCart &&  
             <div>
-                <i className="fa-solid fa-cart-shopping cursor-pointer text-3xl transform hover:scale-150 duration-500 "></i>
-            </div>
+                <i className="fa-solid fa-cart-shopping cursor-pointer text-3xl transform hover:scale-150 duration-500 " onClick={handleOpen}></i>
+            </div>}
+           
         </div>
             
         </>

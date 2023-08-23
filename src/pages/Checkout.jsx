@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header"
 
 
-export default function Checkout(){
+export default function Checkout({currentCart}){
 
     return(
         <>

@@ -8,7 +8,9 @@ import Checkout from './pages/Checkout.jsx'
 import Error from './pages/util pages/Error.jsx'
 
 
-export default function Router() {
+export default function Router({setIsCart, isCart, 
+                                currentCart, setCart, total,
+                                menItems, womenItems}) {
 
     const router = createBrowserRouter([
         {
@@ -18,11 +20,13 @@ export default function Router() {
         },
         {
             path: "shop",
-            element: <Shop/>,
+            element: <Shop setIsCart = {setIsCart} isCart={isCart} 
+            currentCart={currentCart} setCart={setCart} total={total}
+            menItems={ menItems } womenItems={ womenItems }/>,
         },
         {
             path: "checkout",
-            element: <Checkout/>
+            element: <Checkout  currentCart={currentCart}/>
         }
     ])
 

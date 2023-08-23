@@ -1,9 +1,13 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header"
 import Men from './clothing pages/Men.jsx';
 import Women from './clothing pages/Women.jsx';
-import { useState } from "react";
+import Cart from '../components/cart'
 
-export default function Shop(){
+import { useEffect, useState } from "react";
+
+export default function Shop({setIsCart, isCart, 
+    currentCart, setCart, total,
+    menItems, womenItems}){
 
     const [isMen, setIsMen] = useState(true);
 
@@ -14,11 +18,13 @@ export default function Shop(){
     const handleWomen = () =>{
         setIsMen(false);
     }
-    
+
+   
 
     return(
         <>
-            <Header/>
+            <Header setIsCart = {setIsCart} showCart={true}/>
+            <Cart isCart={isCart} setIsCart = {setIsCart} currentCart={currentCart} setCart={setCart} total={total}/>
             <section id="shop" className="p-16 h-[100vh]">
                 <div className="flex">
                     <h1 className={`cursor-pointer ${isMen ? "underline underline-offset-8" : ""}`} onClick={handleMen}>Men</h1>
@@ -27,8 +33,8 @@ export default function Shop(){
 
                     <h1 className={`cursor-pointer ${!isMen ? "underline underline-offset-8" : ""} ml-4`} onClick={handleWomen} >Women</h1>
                 </div>
-                {isMen ? <Men/> : <Women/>}
-            </section>
+                {isMen ? <Men items={ menItems } currentCart={currentCart} setCart={setCart}/> : <Women items={ womenItems } currentCart={currentCart} setCart={setCart}/>}
+            </section> :
         </>
     )
 }

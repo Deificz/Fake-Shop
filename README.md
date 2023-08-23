@@ -1,4 +1,4 @@
-# Fake Shop
+# Mock Store
 
 A shopping mock website 
 

@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 export default function Navbar({setIsCart, showCart, quantity}) {
 
     const handleOpen = () => {
-        setIsCart(true);
+        if(quantity>0)
+            setIsCart(true);
     }
 
     return(

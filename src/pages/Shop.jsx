@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Shop({setIsCart, isCart, 
     currentCart, setCart, total,
-    menItems, womenItems}){
+    menItems, womenItems, quantity}){
 
     const [isMen, setIsMen] = useState(true);
     const [isCheckout, setCheckout] = useState(false);
@@ -22,7 +22,7 @@ export default function Shop({setIsCart, isCart,
 
     return(
         <>
-            <Header setIsCart = {setIsCart} showCart={true}/>
+            <Header setIsCart = {setIsCart} showCart={true} quantity = {quantity} />
             {isCheckout && <Checkout total={total}/>}
             <Cart isCheckout={isCheckout} setCheckout={setCheckout} isCart={isCart} setIsCart = {setIsCart} currentCart={currentCart} setCart={setCart} total={total}/>
             <section id="shop" className="p-16 h-[100vh]">

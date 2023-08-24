@@ -12,11 +12,19 @@ function App() {
 
     const [total, setTotal] = useState(0);
 
+    const [quantity, setQuantity] = useState(0);
+
     useEffect(() => {
           setTotal(0);
           currentCart.map(item => setTotal(prevTotal => prevTotal + (item.price * item.quantity)) )
       },[currentCart]);
 
+    useEffect(() => {
+        setQuantity(0);
+        currentCart.map(item => setQuantity(prevQuantity => prevQuantity + item.quantity))
+    },[currentCart]);
+
+    console.log(quantity);
   //GET SAMPLE PRODUCTS
   useEffect(() => {
       const fetchClothes = async () => {
@@ -52,7 +60,7 @@ function App() {
     <>
       <Router setIsCart = {setIsCart} isCart={isCart} 
               currentCart={currentCart} setCart={setCart} total={total}
-              menItems={ menItems } womenItems={ womenItems } />
+              menItems={ menItems } womenItems={ womenItems } quantity={ quantity } />
     </>
   )
 }

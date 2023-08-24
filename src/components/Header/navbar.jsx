@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-export default function Navbar({setIsCart, showCart}) {
+export default function Navbar({setIsCart, showCart, quantity}) {
 
     const handleOpen = () => {
         setIsCart(true);
@@ -24,6 +24,7 @@ export default function Navbar({setIsCart, showCart}) {
 
             {showCart &&  
             <div>
+                <h1 className='text-center font-bold'>{quantity}</h1>
                 <i className="fa-solid fa-cart-shopping cursor-pointer text-3xl transform hover:scale-150 duration-500 " onClick={handleOpen}></i>
             </div>}
            

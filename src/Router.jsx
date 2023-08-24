@@ -7,7 +7,7 @@ import Error from './pages/util pages/Error.jsx'
 
 export default function Router({setIsCart, isCart, 
                                 currentCart, setCart, total,
-                                menItems, womenItems}) {
+                                menItems, womenItems, quantity}) {
 
     const router = createBrowserRouter([
         {
@@ -19,7 +19,7 @@ export default function Router({setIsCart, isCart,
             path: "shop",
             element: <Shop setIsCart = {setIsCart} isCart={isCart} 
             currentCart={currentCart} setCart={setCart} total={total}
-            menItems={ menItems } womenItems={ womenItems }/>,
+            menItems={ menItems } womenItems={ womenItems } quantity = { quantity }/>,
         },
 
     ])

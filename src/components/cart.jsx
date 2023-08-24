@@ -34,7 +34,7 @@ export default function Cart({isCart, setIsCart, currentCart, setCart, total, se
                 setCheckout(false);
                 setCart([]);
                 setIsCart(false);
-            }, 2000);
+            }, 1500);
             
         }
             

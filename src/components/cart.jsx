@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Cart({isCart, setIsCart, currentCart, setCart, total}) {
+export default function Cart({isCart, setIsCart, currentCart, setCart, total, setCheckout, isCheckout}) {
 
     
     const handleClose = () => {
@@ -23,7 +23,24 @@ export default function Cart({isCart, setIsCart, currentCart, setCart, total}) {
                         : product))
     }
 
-  
+    const clearCart = () => {
+        setCheckout(true);
+        window.scrollTo(0, 0);
+    }
+
+    useEffect(() => {
+        if(isCheckout === true){
+            setTimeout(() => {
+                setCheckout(false);
+                setCart([]);
+                setIsCart(false);
+            }, 2000);
+            
+        }
+            
+        
+    },[isCheckout])
+
     return(
         <>
             <div className={`h-[100vh] ${isCart ? 'w-[300px] border-l-2 border-red-500 rounded-tl-xl rounded-bl-xl' : '' } w-0  top-0 right-0 bg-slate-100  fixed flex flex-col pt-5 transition-all duration-200`}>
@@ -45,10 +62,8 @@ export default function Cart({isCart, setIsCart, currentCart, setCart, total}) {
                 </div>
                 <h1 className='mt-5 text-center'>Total: <span className='text-green-500 font-bold'>{Math.floor(total * 100)/100}</span></h1>
                 
-                <Link path='/checkout' className='text-right'>
-                    <button className="m-5 px-10 py-5 bg-red-400 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-red-500 ">Checkout</button>
-                </Link>
-               
+            
+                <button onClick={clearCart} className="m-5 px-10 py-5 bg-red-400 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-red-500 ">Checkout</button>
             </div>
         </>
     )

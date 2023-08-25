@@ -11,13 +11,13 @@ export default function Router({setIsCart, isCart,
 
     const router = createBrowserRouter([
         {
-            path: "/Mock-Store",
+            path: "/",
             index: true,
             element: <Home/>,
             errorElement: <Error/>
         },
         {
-            path: "/Mock-Store/shop",
+            path: "shop",
             element: <Shop setIsCart = {setIsCart} isCart={isCart} 
             currentCart={currentCart} setCart={setCart} total={total}
             menItems={ menItems } womenItems={ womenItems } quantity = { quantity }/>,

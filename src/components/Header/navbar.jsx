@@ -13,11 +13,11 @@ export default function Navbar({setIsCart, showCart, quantity}) {
 
             <div className='flex ml-10'>
                 <div className='ml-10 group'>
-                    <Link to="/" className='text-xl '>Home</Link>
+                    <Link to="/Mock-Store" className='text-xl '>Home</Link>
                     <div className='mt-1 w-0 h-1 bg-white group-hover:w-full transition-all duration-300'></div>
                 </div>                
                 <div className='ml-10 group'> 
-                    <Link to="/shop" className='text-xl '>Shop</Link> 
+                    <Link to="/Mock-Store/shop" className='text-xl '>Shop</Link> 
                     <div className='mt-1 w-0 h-1 bg-white group-hover:w-full transition-all duration-300'></div>
                 </div>
                 

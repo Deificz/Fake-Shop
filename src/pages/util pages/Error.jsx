@@ -5,7 +5,7 @@ export default function Error() {
         <>
             <div className='bg-slate-800 flex h-screen justify-center items-center'>
                 <h1>OOPS Something went wrong</h1>
-                <Link to="/">Go back</Link>
+                <Link to="/Mock-Store">Go back</Link>
             </div>
         </>
     )

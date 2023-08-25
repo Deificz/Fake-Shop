@@ -24,7 +24,6 @@ function App() {
         currentCart.map(item => setQuantity(prevQuantity => prevQuantity + item.quantity))
     },[currentCart]);
 
-    console.log(quantity);
   //GET SAMPLE PRODUCTS
   useEffect(() => {
       const fetchClothes = async () => {

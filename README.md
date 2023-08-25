@@ -10,4 +10,4 @@ Tech stack used:
 
 Available for Desktop only
 
-**Live preview:** https://deificz.github.io/Mock-Store
+**Live preview:** https://deificz-clothing.netlify.app/

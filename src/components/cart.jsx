@@ -54,7 +54,7 @@ export default function Cart({isCart, setIsCart, currentCart, setCart, total, se
                                         <img src={item.image} alt="" className="h-[20vh] mb-5" />
                                         <h1 className="text-center">{item.title}</h1>
                                         <h1 className="text-center mt-5">Quantity: {item.quantity}<i className="fa-solid fa-plus ml-5 cursor-pointer" onClick={() => increase(item)}></i><i className="fa-solid fa-minus ml-2 cursor-pointer" onClick={() => decrease(item)}></i></h1>
-                                        <h1 className="text-center mt-5">Price: $ <span className='text-green-600 font-bold'>{item.price*item.quantity}</span></h1>
+                                        <h1 className="text-center mt-5">Price: $ <span className='text-green-600 font-bold'>{Math.floor((item.price*item.quantity)*100)/100}</span></h1>
                                     </div>
                         )
                     }

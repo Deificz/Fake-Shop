@@ -1,11 +1,12 @@
 # Mock Store
 
-A shopping mock website 
+A shopping store mock website 
 
 Tech stack used:
   -  HTML
   -  Tailwind CSS
   -  ReactJS
   -  Fake Store API : https://fakestoreapi.com/
+#
 
-**Live preview:** https://deificz-clothing.netlify.app/
+### **LIVE PREVIEW:** https://deificz-clothing.netlify.app/

@@ -8,6 +8,4 @@ Tech stack used:
   -  ReactJS
   -  Fake Store API : https://fakestoreapi.com/
 
-Available for Desktop only
-
 **Live preview:** https://deificz-clothing.netlify.app/

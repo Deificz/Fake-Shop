@@ -36,14 +36,8 @@ function App() {
               const raw_data = await response.json();
 
               //Filter the data for clothing only
-              const menData = raw_data.filter(piece => {
-                  if(piece.category == "men's clothing")
-                      return piece.category
-              });
-              const womenData = raw_data.filter(piece => {
-                  if(piece.category == "women's clothing")
-                      return piece.category
-              });
+              const menData = raw_data.filter(piece => piece.category == "men's clothing");
+              const womenData = raw_data.filter(piece => piece.category == "women's clothing");
 
               setMenItems(menData);
               setWomenItems(womenData);

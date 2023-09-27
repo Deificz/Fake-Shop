@@ -34,7 +34,7 @@ export default function List({items, currentCart, setCart}) {
     }
     
     return(
-        <div className="flex flex-wrap h-fit w-fit">
+        <div className="flex flex-wrap h-fit w-fit ">
             {items.map((item) =>
                 <div key={item.id} className="grid grid-rows-[1fr_3fr_2fr] text-center p-5 rounded-2xl w-72 ml-16 mb-16">
                     <h1 className="mb-10 text-center font-bold">{item.title}</h1>

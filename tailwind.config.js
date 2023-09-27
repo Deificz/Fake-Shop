@@ -13,6 +13,9 @@ export default {
       },
       backgroundImage:{
           'custom': "url('./assets/Images/bg.jpg')",
+      },
+      screens:{
+        'sm_max': {'max': '700px'},
       }
     },
   },

@@ -25,8 +25,8 @@ export default function Shop({setIsCart, isCart,
             <Header setIsCart = {setIsCart} showCart={true} quantity = {quantity} />
             {isCheckout && <Checkout total={total}/>}
             <Cart isCheckout={isCheckout} setCheckout={setCheckout} isCart={isCart} setIsCart = {setIsCart} currentCart={currentCart} setCart={setCart} total={total}/>
-            <section id="shop" className="p-16 h-[full]">
-                <div className="flex">
+            <section id="shop" className="md:p-16 h-[full]">
+                <div className="flex mt-5 md:mt-0 ml-5 md:ml-0">
                     <h1 className={`cursor-pointer ${isMen ? "underline underline-offset-8" : ""}`} onClick={handleMen}>Men's</h1>
                 
                     <h1 className="ml-4">/</h1>
